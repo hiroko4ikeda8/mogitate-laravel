@@ -1,0 +1,92 @@
+/* ベース設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 20px;
+}
+
+/* メインコンテナ（左右分割） */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    /* 左側に揃える */
+}
+
+/* 左側のコンテナ（商品一覧と検索フォームをまとめる） */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    /* 最大幅を指定 */
+}
+
+/* 左側の商品一覧見出し */
+.product-list-header h2 {
+    font-size: 24px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 検索フォーム */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #F5C800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #E0B900;
+}
+
+/* 右側の商品追加ボタン */
+.add-product-btn button {
+    padding: 12px 20px;
+    background-color: #F5C800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+}
+
+.add-product-btn button:hover {
+    background-color: #E0B900;
+}
