@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductsSeasonsTable extends Migration
+class CreateProductSeasonTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProductsSeasonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products_seasons', function (Blueprint $table) {
+        Schema::create('product_season', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
             $table->foreignId('season_id')->constrained('seasons')->onDelete('cascade');
@@ -28,6 +28,6 @@ class CreateProductsSeasonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products_seasons');
+        Schema::dropIfExists('product_season');
     }
 }
