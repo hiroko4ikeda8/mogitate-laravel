@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    /* 入力欄の背景色 */
+}
+
+input[type="text"]::placeholder {
+    color: #E0DFDE;
+    /* プレースホルダー文字を薄い色に設定 */
+}
+
+input[type="text"]:focus {
+    background-color: #fff;
+    /* フォーカス時の背景色 */
+    border-color: #4CAF50;
+    /* フォーカス時の枠線色 */
+}
+
+.season-group {
+    display: flex;
+    justify-content: space-between;
+    /* ラジオボタンを均等に配置 */
+    gap: 10px;
+    /* ラジオボタン間のスペース */
+}
+
+label {
+    margin: 10px 0 5px;
+    display: inline-flex; /* 横並びにする */
+    align-items: center;  /* ラジオボタンとテキストを縦方向で中央揃え */
+    margin-right: 15px;    /* ラジオボタン間のスペース */
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+    background-color: #f4f4f4;
+    /* 入力欄の背景色 */
+    width: 100%;
+    /* 横幅を100%にして広げる */
+}
+
+textarea::placeholder {
+    color: #E0DFDE;
+    /* プレースホルダー文字を薄い色に設定 */
+}
+
+textarea:focus {
+    background-color: #fff;
+    /* フォーカス時の背景色 */
+    border-color: #4CAF50;
+    /* フォーカス時の枠線色 */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+#image_preview img {
+    max-width: 100%;
+    height: auto;
+}

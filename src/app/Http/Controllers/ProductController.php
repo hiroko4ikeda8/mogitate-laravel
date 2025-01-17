@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -24,7 +26,25 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function register()
+    {
+        return view('products.register');
+    }
+
+    public function store(ProductRequest $request)
+    {
+        // 画像の保存
+        $imagePath = $request->file('image')->store('product_images', 'public');
+
+        // 商品情報の保存
+        Product::create([
+            'product_name' => $request->product_name,
+            'price' => $request->price,
+            'season' => $request->season,
+            'description' => $request->description,
+            'image' => $imagePath,
+        ]);
+
+        return redirect()->route('products.register.success');
+    }
 }
-
-
-
