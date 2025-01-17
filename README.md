@@ -113,6 +113,6 @@ http://localhost
 
 
 ## ER図
-![ER図](docs/ERDiagram.png)
+![ER Diagram](docs/ERDiagram.png)
 
 ---
