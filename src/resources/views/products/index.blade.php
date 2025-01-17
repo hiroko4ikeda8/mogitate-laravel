@@ -21,6 +21,11 @@
         </form>
     </section>
 
+    <!-- 右側の商品追加ボタン -->
+    <section class="add-product-btn">
+        <a href="{{ url('/products/register') }}" class="btn-product-addition">＋ 商品の追加</a>
+    </section>
+
     <!-- 商品一覧表示 -->
     <section class="product-list">
         @foreach($products as $product)
@@ -47,9 +52,6 @@
         <div class="next-button">＞</div>
     </div>
 
-    <!-- 右側の商品追加ボタン -->
-    <section class="add-product-btn">
-        <button>＋ 商品の追加</button>
-    </section>
+
 </div>
 @endsection

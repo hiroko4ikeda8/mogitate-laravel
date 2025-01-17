@@ -16,63 +16,37 @@ form {
     flex-direction: column;
 }
 
-input[type="text"] {
+.form-group {
+    margin-bottom: 15px;
+    /* セクション間の余白を設定 */
+}
+
+label {
+    margin-top: 10px;
+    font-weight: Yu Gothic;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
     padding: 10px;
+    margin-top: 5px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #FFFFFF;
     /* 入力欄の背景色 */
-}
-
-input[type="text"]::placeholder {
-    color: #E0DFDE;
-    /* プレースホルダー文字を薄い色に設定 */
-}
-
-input[type="text"]:focus {
-    background-color: #fff;
-    /* フォーカス時の背景色 */
-    border-color: #4CAF50;
-    /* フォーカス時の枠線色 */
-}
-
-.season-group {
-    display: flex;
-    justify-content: space-between;
-    /* ラジオボタンを均等に配置 */
-    gap: 10px;
-    /* ラジオボタン間のスペース */
-}
-
-label {
-    margin: 10px 0 5px;
-    display: inline-flex; /* 横並びにする */
-    align-items: center;  /* ラジオボタンとテキストを縦方向で中央揃え */
-    margin-right: 15px;    /* ラジオボタン間のスペース */
-}
-
-input,
-textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea {
-    height: 100px;
-    background-color: #f4f4f4;
-    /* 入力欄の背景色 */
     width: 100%;
-    /* 横幅を100%にして広げる */
+    /* 全体幅を統一 */
 }
 
+input[type="text"]::placeholder,
 textarea::placeholder {
     color: #E0DFDE;
     /* プレースホルダー文字を薄い色に設定 */
 }
 
+input[type="text"]:focus,
 textarea:focus {
     background-color: #fff;
     /* フォーカス時の背景色 */
@@ -80,25 +54,89 @@ textarea:focus {
     /* フォーカス時の枠線色 */
 }
 
+textarea {
+    height: 100px;
+    /* テキストエリアの高さ */
+}
+
+.season-group {
+    justify-content: space-between;
+    /* ラジオボタンを均等に配置 */
+    gap: px;
+    /* ラジオボタン間のスペース */
+}
+
+season-group label {
+    margin: 10px 0 5px;
+    display: inline-flex;
+    /* 横並びにする */
+    align-items: center;
+    /* ラジオボタンとテキストを縦方向で中央揃え */
+    margin-right: 15px;
+    /* ラジオボタン間のスペース */
+}
+
+textarea {
+    resize: none;
+    /* テキストエリアのリサイズを無効化 */
+}
+
+.form-buttons {
+    display: flex;
+    /* Flexboxを有効化 */
+    justify-content: center;
+    /* 要素を中央に配置 */
+    gap: 10px;
+    /* ボタン間の余白を設定 */
+    margin-top: 20px;
+    /* セクション上部の余白を追加 */
+}
+
+.btn-back,
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    width: 200px; /* 幅を固定 */
+    padding: 13px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex; /* Flexboxを有効化 */
+    justify-content: center; /* 横方向に中央揃え */
+    align-items: center; /* 縦方向に中央揃え */
+}
+
+.btn-back {
+    background-color: #E0DFDE;
+    color: #4B4B4B;
+    text-decoration: none;
+}
+
+button {
+    background-color: #F5C800;
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #DDB400;
 }
 
 .error {
     color: red;
     font-size: 0.9em;
+    margin-top: -10px;
+    /* エラーメッセージを入力欄に近づける */
+    margin-bottom: 10px;
 }
 
 #image_preview img {
     max-width: 100%;
+    /* プレビュー画像をコンテナ内に収める */
     height: auto;
+    margin-top: 10px;
+}
+
+/* 商品画像とファイル選択ボタンを適切に配置 */
+#image_preview {
+    margin-bottom: 15px;
 }

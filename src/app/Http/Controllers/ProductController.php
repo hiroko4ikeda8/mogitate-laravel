@@ -38,13 +38,13 @@ class ProductController extends Controller
 
         // 商品情報の保存
         Product::create([
-            'product_name' => $request->product_name,
+            'name' => $request->product_name,
             'price' => $request->price,
             'season' => $request->season,
             'description' => $request->description,
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('products.register.success');
+        return redirect()->route('products.index');
     }
 }
