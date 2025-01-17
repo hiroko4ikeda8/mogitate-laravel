@@ -29,14 +29,14 @@
 laravel-docker-template.gitをクローンしてリポジトリ名をmogitate-laravelに変更します。
 
 ```bash
-$ git clone git@github.com:coachtech-material/laravel-docker-template.git 
+$ git clone git@github.com:coachtech-material/laravel-docker-template.git
 $ mv laravel-docker-template mogitate-laravel
 ```
 GitHub にて個人のリモートリポジトリの url を変更します。
 mogitate-laravelという変更先のリモートリポジトリをpublicで作成します。
 
 変更先のリポジトリの作成が終わったら、ローカルリポジトリから紐付け先を変更します。
-Set up Desktop or sshを選択し、git@github.com:user name/mogitate-laravel.gitをコピーし、作成したリポジトリのurlと記述されている以下の部分にペーストする
+Set up Desktop or sshを選択し、git@github.com:user name/mogitate-laravel.gitをコピーし、「作成したリポジトリのurl」と記述されている以下の部分にペーストする
 
 ```bash
 $ cd mogitate-laravel
@@ -71,7 +71,7 @@ $ docker-compose exec app composer install
 これで、Laravelプロジェクトの依存関係がインストールされます。
 
 ### 5. 環境設定
-`.env` ファイルを作成（もしまだ作成されていない場合）します。`env.example` ファイルをコピーして `.env` を作成します。
+`.env` ファイルを作成（まだ作成されていない場合）します。`env.example` ファイルをコピーして `.env` を作成します。
 
 ```bash
 $ cp .env.example .env
@@ -81,11 +81,11 @@ $ cp .env.example .env
 
 ```env
 DB_CONNECTION=mysql
-DB_HOST=mysql← Dockerコンテナ内のサービス名に合わせる
+DB_HOST=mysql ← Dockerコンテナ内のサービス名に合わせる
 DB_PORT=3306
-DB_DATABASE=laravel_db←必要に応じて変更
-DB_USERNAME=laravel_user←必要に応じて変更
-DB_PASSWORD=laravel_pass←必要に応じて変更
+DB_DATABASE=laravel_db ←必要に応じて変更
+DB_USERNAME=laravel_user ←必要に応じて変更
+DB_PASSWORD=laravel_pass ←必要に応じて変更
 ```
 
 ### 6. アプリケーションキーの生成
@@ -110,9 +110,11 @@ $ docker-compose exec app php artisan migrate
 ```
 http://localhost
 ```
+### 最期に
+※開発環境によって不要なファイルが含まれています、自己判断で削除してください。
 
 
 ## ER図
-![ER図](docs/ERDiagram.png)
+![ER Diagram](docs/ERDiagram.png)
 
 ---
