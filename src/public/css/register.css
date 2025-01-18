@@ -41,7 +41,7 @@ label {
 .required {
     color: red; /* 必須のテキストを赤色に */
     font-weight: Yu Gothic; /* 強調表示 */
-    margin-left: 115px; /* 少し間隔を空ける */
+    margin-left: 20px; /* 少し間隔を空ける */
 }
 
 input[type="text"],

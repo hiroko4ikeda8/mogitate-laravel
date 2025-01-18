@@ -22,30 +22,48 @@ main {
     padding: 20px;
 }
 
-
-/* 左側のコンテナ（商品一覧と検索フォームをまとめる） */
-.left-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 300px;
-    /* 最大幅を指定 */
-}
-
-/* 左側の商品一覧見出し */
+/* 商品一覧の見出し */
 .product-list-header h2 {
     font-size: 24px;
     color: #333;
     font-family: 'Arial', sans-serif;
 }
 
+/* 商品一覧の見出しと追加ボタンを横並びにする */
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 高さを揃える */
+    margin-bottom: 20px;
+}
+
+/* 右側の商品追加ボタン */
+.add-product-btn .btn-product-addition {
+    padding: 12px 20px;
+    background-color: #F5C800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+}
+
+.add-product-btn .btn-product-addition:hover {
+    background-color: #DDB400;
+}
+
 /* 検索フォーム */
 .search-form {
     display: flex;
     flex-direction: column;
+    /* 上下に並べる */
     gap: 10px;
+    /* 入力欄とボタンの間隔 */
 }
 
+/* 検索フォームのインプット欄 */
 .search-form input {
     padding: 10px;
     font-size: 14px;
@@ -53,6 +71,7 @@ main {
     border-radius: 5px;
 }
 
+/* 検索フォームのボタン */
 .search-form button {
     padding: 10px 20px;
     background-color: #F5C800;
@@ -67,18 +86,67 @@ main {
     background-color: #E0B900;
 }
 
-/* 右側の商品追加ボタン */
-.add-product-btn button {
-    padding: 12px 20px;
-    background-color: #F5C800;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    cursor: pointer;
+/* 商品一覧のグリッド設定 */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(374px, 1fr));
+    /* 横幅374px以上で均等に並べる */
+    gap: 2rem;
+    /* アイテム間の隙間 */
 }
 
-.add-product-btn button:hover {
-    background-color: #DDB400;
+/* 商品アイテムのスタイル */
+.product-item {
+    border: 1px solid #ddd;
+    /* 商品アイテムの枠線（必要に応じて追加） */
+    padding: 1rem;
+    /* 内側のパディング */
+}
+
+.product-item img {
+    width: 100%;
+    /* 画像を親要素にフィットさせる */
+    height: auto;
+    /* 高さは自動調整 */
+}
+
+/* ページネーションコンテナ */
+.pagination-container {
+    display: flex;
+    /* 横並びにする */
+    align-items: center;
+    /* 縦方向で中央揃え */
+    justify-content: center;
+    /* 横方向で中央揃え */
+    gap: 10px;
+    /* アイテム間の間隔 */
+    height: 100vh;
+    /* 高さを画面全体にする（オプション） */
+}
+
+/* 前のページボタン */
+.prev-button,
+.next-button {
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ページ番号 */
+.page-numbers {
+    display: flex;
+    /* 横並びにする */
+    gap: 5px;
+    /* ページ番号間の間隔 */
+}
+
+.page-item {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.page-item:hover {
+    background-color: #f0f0f0;
 }
