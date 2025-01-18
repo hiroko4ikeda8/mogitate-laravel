@@ -10,9 +10,9 @@
 <div class="container">
     <h1>商品登録</h1>
     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    @csrf
         <section class="form-group">
-            <label for="product_name">商品名</label>
+            <label for="product_name">商品名<span class="required">必須</span></label>
             <input type="text" id="product_name" name="product_name" value="{{ old('product_name') }}" placeholder="商品名を入力">
             @error('product_name')
             <div class="error">{{ $message }}</div>
@@ -20,7 +20,7 @@
         </section>
 
         <section class="form-group">
-            <label for="price">値段</label>
+            <label for="price">値段<span class="required">必須</span></label>
             <input type="text" id="price" name="price" value="{{ old('price') }}" placeholder="値段を入力">
             @error('price')
             <div class="error">{{ $message }}</div>
@@ -32,7 +32,7 @@
                 <img id="preview_img" src="" alt="商品画像のプレビュー" style="display:none;" width="374" height="281">
             </div>
 
-            <label for="image">商品画像</label>
+            <label for="image">商品画像<span class="required">必須</span></label>
             <input type="file" id="image" name="image" accept="image.png" onchange="previewImage(event)" required>
             @error('image')
             <div class="error">{{ $message }}</div>
@@ -40,7 +40,7 @@
         </section>
 
         <section class="form-group">
-            <label>季節</label>
+            <label>季節<span class="required">必須</span></label>
             <div class="season-group">
                 <label for="spring">
                     <input type="radio" id="spring" name="season" value="春"> 春
@@ -61,7 +61,7 @@
         </section>
 
         <section class="form-group">
-            <label for="description">商品説明</label>
+            <label for="description">商品説明<span class="required">必須</span></label>
             <textarea id="description" name="description" placeholder="商品の説明を入力">{{ old('description') }}</textarea>
             @error('description')
             <div class="error">{{ $message }}</div>

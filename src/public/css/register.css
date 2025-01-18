@@ -5,6 +5,18 @@ body {
     padding: 0;
 }
 
+/* ヘッダー */
+header {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header .logo img {
+    width: 120px;
+    height: auto;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -24,6 +36,12 @@ form {
 label {
     margin-top: 10px;
     font-weight: Yu Gothic;
+}
+
+.required {
+    color: red; /* 必須のテキストを赤色に */
+    font-weight: Yu Gothic; /* 強調表示 */
+    margin-left: 115px; /* 少し間隔を空ける */
 }
 
 input[type="text"],

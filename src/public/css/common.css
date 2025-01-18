@@ -1,0 +1,58 @@
+/* ヘッダー */
+header {
+    width: 100%;
+    /* 画面いっぱいの幅 */
+    height: 53px;
+    /* 固定高さ */
+    padding: 10px 20px;
+    gap: 10px;
+    border: 0px 0px 1px 0px;
+    /* 下部にボーダー */
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    /* ヘッダー背景 */
+    z-index: 1000;
+    /* ヘッダーが他の要素に隠れないようにする */
+}
+
+header .logo img {
+    width: 112px;
+    /* ロゴの幅 */
+    height: 33px;
+    /* ロゴの高さ */
+    gap: 0px;
+    /* アイテム間の隙間（今回は0に設定） */
+    opacity: 1;
+    /* ロゴを表示状態にする（0にすると非表示になる） */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F8F8;
+    /* 背景色を設定 */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* 画面全体をカバーするため */
+}
+
+/* main-content のスタイル */
+.main-content {
+    width: 100%;
+    /* 横幅を全画面にする */
+    max-width: 1512px;
+    /* 最大幅を設定 */
+    margin: 0 auto;
+    /* 中央寄せ */
+    padding-top: 53px;
+    /* ヘッダーの下に余白 */
+    padding-bottom: 70px;
+    /* ボディの下に余白 */
+    opacity: 1;
+    box-sizing: border-box;
+}
+
+/* 追加のスタイル（必要に応じて） */

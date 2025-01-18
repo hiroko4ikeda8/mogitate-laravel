@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品一覧</title>
-    <link rel="stylesheet" href="sanitize.css">
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     @yield('css')
 </head>
 
 <body>
+    <!-- ヘッダー -->
     <header>
         <div class="logo">
-            <img src="/asset/images/mogitate.png" alt="Mogitate Logo" style="height: 45px;">
+            <img src="{{ asset('asset/images/mogitate.png') }}" alt="Mogitate Logo" style="height: 30px;">
         </div>
     </header>
 
     <!-- メインコンテンツ -->
-    <main>
+    <div class="main-content">
         @yield('content')
-    </main>
+    </div>
 </body>
 
 </html>

@@ -26,6 +26,20 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function show($productId)
+    {
+        // 商品を取得
+        $product = Product::find($productId);
+
+        // 商品が見つからない場合の処理
+        if (!$product) {
+            abort(404, '商品が見つかりません');
+        }
+
+        // ビューにデータを渡す
+        return view('products.show', compact('product'));
+    }
+
     public function register()
     {
         return view('products.register');
