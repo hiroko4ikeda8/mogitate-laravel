@@ -55,16 +55,26 @@ textarea {
     gap: 20px;
 }
 
-.btn-back,
+.btn-back{
+        padding: 10px 20px;
+        background-color: #E0DFDE;
+        color: #4B4B4B;
+        border: none;
+        cursor: pointer;
+    }
+    
 .btn-save {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #F5C800;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.btn-back:hover,
+.btn-back:hover{
+        background-color: #45a049;
+    }
+    
 .btn-save:hover {
-    background-color: #45a049;
+    background-color: #DDB400;
 }
